@@ -1,0 +1,40 @@
+.mainSidebarContainer{
+    flex: 0.8;
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+}
+
+.ulContainer{
+    margin-top: 70px;
+}
+
+.liContainer{
+    display: flex;
+    align-items: center;
+    margin-top: -7px ;
+}
+
+.menu{
+    display: flex;
+    color: rgb(102, 102, 102);
+}
+
+.adminContainer{
+    display: flex;
+    margin-top: -10px;
+}
+
+.adminText{
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.sidebarIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.itemNames{
+    margin-left: 10px;
+    color: rgb(101, 109, 109);
+}
