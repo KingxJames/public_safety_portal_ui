@@ -1,7 +1,7 @@
 // Navbar.tsx
 import React, { Profiler } from 'react';
 import "./Navbar.css";
-
+import
 
 interface NavbarProps {
 
@@ -14,7 +14,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
           <h1>Dashboard</h1>
         </div>
         <div>
-          <img src={`${Search}`} alt="" />
+          <img src={`${Search}`}alt="" />
           <input type="search" />
         </div>
         <div>
