@@ -1,0 +1,33 @@
+.mainNavbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.notificationIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.profileIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.searchItemsContainer{
+    display: flex;
+}
+
+.profileItemsContainer{
+    display: flex;
+}
+
+.profileItems{
+    display: flex;
+    align-items: center;
+}
