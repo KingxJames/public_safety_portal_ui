@@ -1,41 +1,123 @@
-.mainSidebarContainer{
-    flex: 0.8;
-    background-color: rgb(247, 247, 247);
-    height: 100vh;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  z-index: 100;
+  transition: width 0.5s ease; /* Changed from all to width only */
 }
 
-.ulContainer{
-    margin-top: 70px;
+.nav-list {
+margin-top: -30px;
+  padding: 30px 0;
+  overflow-y: auto; /* Changed from overflow to overflow-y */
 }
 
-.liContainer{
-    display: flex;
-    align-items: center;
-    margin-top: -7px ;
+.nav-list::-webkit-scrollbar {
+  width: 0; /* Removed scrollbar for all nav-list */
 }
 
-.menu{
-    display: flex;
-    color: rgb(102, 102, 102);
+.nav-list li {
+  position: relative;
+  list-style: none;
+  transition: background-color 0.4s ease; /* Changed from all to background-color */
 }
 
-.adminContainer{
-    display: flex;
-    margin-top: -10px;
+.nav-list li:hover {
+  background-color: #e7e7e7;
+}
+
+.nav-list li i {
+  height: 50px;
+  width: 78px; /* Added width to match min-width */
+  text-align: center;
+  line-height: 50px;
+  color: #3a3535;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Changed from all to transform only */
+}
+
+.nav-list li.show i.arrow {
+  transform: rotate(-180deg);
+}
+
+.nav-list li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-list li a .link-name {
+  color: #4c4949;
+  font-size: 18px;
+  font-weight: 400;
+  transition: opacity 0.4s ease; /* Changed from all to opacity only */
+}
+
+.nav-list li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #e7e7e7;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Added transition for opacity and transform */
+}
+
+.nav-list li.show .sub-menu {
+  display: block;
+}
+
+.nav-list li .sub-menu a {
+    color: #4c4949;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: opacity 0.3s ease; /* Added transition for opacity */  
+}
+
+.nav-list li .sub-menu a:hover {
+  opacity: 1;
+}
+
+.nav-list li .sub-menu .link-name {
+  display: none;
+}
+
+.nav-list li .sub-menu.blank {
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-list li:hover .sub-menu {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.nav-list li:hover .sub-menu.blank {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .adminText{
-    font-size: 20px;
-    margin-left: 40px;
+    color: #474141;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
-.sidebarIcon{
-    width: 30px;
-    height: 30px;
-}
-
-.itemNames{
-    margin-left: 10px;
-    color: rgb(101, 109, 109);
+hr{
+    width: 90%;
+    opacity: 50%;
+    margin-top: 20px;
+    position: relative;
+    left: 5%
 }
 

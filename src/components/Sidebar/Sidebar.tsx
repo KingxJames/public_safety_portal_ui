@@ -1,12 +1,8 @@
 // Sidebar.tsx
 import React from 'react';
 import "./Sidebar.css";
-import Home from "../../components/Icons/home.png";
-import Message from "../../components/Icons/message.png";
-import Users from "../../components/Icons/friends.png";
-import Report from "../../components/Icons/Report a problem.png";
-import Setting from "../../components/Icons/settings(1).png";
-
+// import { faHome, faUser, faCogs } from '@fortawesome/free-solid-svg-icons';
+import {faClockRotateLeft, faHeart, faLaptopCode, faBookmark, faCartShopping, faCog } from '@fortawesome/free-solid-svg-icons';
 
 interface SidebarProps {
 
@@ -14,44 +10,80 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = () => {
   return (
-    <div className="mainSidebarContainer">
-      <div>
-        <div className='adminContainer'>
-          <h1 className='adminText'>Admin</h1>
+<div className="sidebar">
+  <h3 className="adminText">Admin Portal</h3>
+  <hr></hr>
+  <ul className="nav-list">
+    <li>
+      <a href="#">
+        <i className="fab fa-microsoft"></i>
+        <span className="link-name">Dashboard</span>
+      </a>
+
+      <ul className="sub-menu blank">
+        <li><a href="#" className="link-name">Dashboard</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <div className="icon-link">
+        <a href="#">
+          <i className="fab fa-codepen"></i>
+          <span className="link-name">Messages</span>
+        </a>
+        <i className="fas fa-caret-down arrow"></i>
       </div>
 
-        <ul className='ulContainer'>
-          <h4 className='menu'>Admin Portal</h4>
-          <li className='liContainer'>
-            <img src={`${Home}`} className='sidebarIcon' alt="" />
-            <p className='itemNames'>Dashboard</p>
-          </li>
+      <ul className="sub-menu">
+        <li><a href="#" className="link-name">Messages</a></li>
+        <li><a href="#">Anonymous Tips</a></li>
+        <li><a href="#">Emergencies</a></li>
+      </ul>
+    </li>
 
-          <li className='liContainer'>
-            <img src={`${Message}`} className='sidebarIcon' alt="" />
-            <p className='itemNames'>Messages</p>
-          </li>
+    <li>
+      <a href="#">
+        <i className="fab fa-microsoft"></i>
+        <span className="link-name">Users</span>
+      </a>
 
-          <li className='liContainer'>
-            <img src={`${Users}`} className='sidebarIcon' alt="" />
-            <p className='itemNames'>Users</p>
-          </li>
+      <ul className="sub-menu blank">
+        <li><a href="#" className="link-name">Users</a></li>
+      </ul>
+    </li>
 
-          <li className='liContainer'>
-            <img src={`${Report}`} className='sidebarIcon' alt="" />
-            <p className='itemNames'>Reports</p>
-          </li>
 
-          <li className='liContainer'>
-            <img src={`${Setting}`} className='sidebarIcon' alt="" />
-            <p className='itemNames'>Settings</p>
-          </li>
-        </ul>
+    <li>
+      <a href="#">
+        <i className="fab fa-microsoft"></i>
+        <span className="link-name">Reports</span>
+      </a>
 
-        
+      <ul className="sub-menu blank">
+        <li><a href="#" className="link-name">Reports</a></li>
+      </ul>
+    </li>
+
+
+    <li>
+      <div className="icon-link">
+        <a href="#">
+          <i className="fab fa-blogger"></i>
+          <span className="link-name">Settings</span>
+        </a>
+        <i className="fas fa-angle-right arrow"></i>
       </div>
-    </div>
-  );
+
+      <ul className="sub-menu">
+        <li><a href="#" className="link-name">Settings</a></li>
+        <li><a href="#">Access Groups</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Message Categories</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    );
 };
 
 export default Sidebar;

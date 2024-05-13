@@ -1,33 +1,68 @@
-.mainNavbarContainer{
+.nav {
     display: flex;
-    justify-content: space-between;
+    height: 70px;
+    padding: 20px 36px 70px;
     align-items: center;
-}
-
-.searchIcon{
-    width: 20px;
-    height: 20px;
-}
-
-.notificationIcon{
-    width: 20px;
-    height: 20px;
+    justify-content: space-between;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    
 }
 
 .profileIcon {
-    width: 20px;
-    height: 20px;
+    margin-right: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make the profile icon circular */
 }
 
-.searchItemsContainer{
+.searchItemsContainer {
+    margin-right: auto;
     display: flex;
+    width: 75%;
+    align-items: center;
 }
 
-.profileItemsContainer{
+
+.profileItemsContainer {
     display: flex;
+    align-items: center;
+
 }
 
-.profileItems{
+.profileItems {
     display: flex;
     align-items: center;
 }
+
+.bellIcon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+}
+
+
+  
+
+.search {
+    flex: 1; /* To make the search span across the remaining space */
+    margin-left: 20px; /* Add some space between the search icon and the input */
+    height: 50px;
+    width: 100%; /* Set the width to 100% to fill the remaining space */
+    border: none; /*Remove default border */
+    background-color: #f0f0f0; /* Set default background color */
+    transition: background-color 0.3s ease; /* Add transition effect for hover */
+    border-radius: 10px 10px 10px 10px; /* Change border-radius for the search input */
+}
+
+.search::placeholder {
+    padding-left: 20px;
+}
+
+
+
+.search:hover {
+    background-color: #e0e0e0; /* Change background color on hover */
+    border: none;
+}
+
