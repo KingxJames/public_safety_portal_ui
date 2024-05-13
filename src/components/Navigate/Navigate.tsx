@@ -1,6 +1,6 @@
 // Navigate.tsx
 import React from 'react';
-import ". Navigate.css";
+import "./Navigate.css";
 
 
 interface NavigateProps {

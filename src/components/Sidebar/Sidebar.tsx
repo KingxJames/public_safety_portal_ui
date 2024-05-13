@@ -1,22 +1,42 @@
 // Sidebar.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import "./Sidebar.css";
 // import { faHome, faUser, faCogs } from '@fortawesome/free-solid-svg-icons';
-import {faClockRotateLeft, faHeart, faLaptopCode, faBookmark, faCartShopping, faCog } from '@fortawesome/free-solid-svg-icons';
+import { LuLayoutDashboard } from "react-icons/lu";
+// import {faClockRotateLeft, faHeart, faLaptopCode, faBookmark, faCartShopping, faCog } from '@fortawesome/free-solid-svg-icons';
+import { FaRegMessage } from "react-icons/fa6";
+import { LiaUserSolid } from "react-icons/lia";
+import { TbReportSearch } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaBars, FaTimes } from 'react-icons/fa'; // Assuming you're using React Icons for the hamburger icon
+
+
+
+
 
 interface SidebarProps {
 
 }
 
 export const Sidebar: React.FC<SidebarProps> = () => {
+
   return (
 <div className="sidebar">
-  <h3 className="adminText">Admin Portal</h3>
+  <div className="sidebar-header">
+    <div>
+      <h3 className="adminText">Admin Portal</h3>
+    </div>
+    <div>
+      <i className="hamburger-icon"><RxHamburgerMenu /></i>
+    </div>
+  </div>
   <hr></hr>
+
   <ul className="nav-list">
     <li>
       <a href="#">
-        <i className="fab fa-microsoft"></i>
+        <i><LuLayoutDashboard /></i>
         <span className="link-name">Dashboard</span>
       </a>
 
@@ -28,10 +48,9 @@ export const Sidebar: React.FC<SidebarProps> = () => {
     <li>
       <div className="icon-link">
         <a href="#">
-          <i className="fab fa-codepen"></i>
+        <i > < FaRegMessage /></i>
           <span className="link-name">Messages</span>
         </a>
-        <i className="fas fa-caret-down arrow"></i>
       </div>
 
       <ul className="sub-menu">
@@ -43,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
 
     <li>
       <a href="#">
-        <i className="fab fa-microsoft"></i>
+        <i><LiaUserSolid /></i>
         <span className="link-name">Users</span>
       </a>
 
@@ -55,7 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
 
     <li>
       <a href="#">
-        <i className="fab fa-microsoft"></i>
+        <i><TbReportSearch /></i>
         <span className="link-name">Reports</span>
       </a>
 
@@ -68,7 +87,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
     <li>
       <div className="icon-link">
         <a href="#">
-          <i className="fab fa-blogger"></i>
+          <i ><IoSettingsOutline /></i>
           <span className="link-name">Settings</span>
         </a>
         <i className="fas fa-angle-right arrow"></i>

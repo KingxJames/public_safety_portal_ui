@@ -14,6 +14,6 @@ export default {
 type Story = {
 };
 
-export const HomeComponent: Story = {
+export const NavigateComponent: Story = {
   
 };
