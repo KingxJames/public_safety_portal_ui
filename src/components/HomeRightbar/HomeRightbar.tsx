@@ -9,8 +9,7 @@ interface HomeRightbarProps {
 
 export const HomeRightbar: React.FC<HomeRightbarProps> = () => {
   return (
-    <div className="mainHomeRightbar">
-      <Navbar/>  
+    <div>
     </div>
   );
 };

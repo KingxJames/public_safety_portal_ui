@@ -2,7 +2,7 @@
 import React from 'react';
 import "./Navbar.css";
 import Search from "../../components/Icons/Search.png";
-import Profile from "../../components/Icons/boy.jpg"
+import Profile from "../../components/Icons/boy.png"
 import Bell from "../../components/Icons/bell.png"
 
 interface NavbarProps {

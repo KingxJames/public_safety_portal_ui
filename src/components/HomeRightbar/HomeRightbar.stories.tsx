@@ -3,7 +3,7 @@
 import  { HomeRightbar } from './HomeRightbar'; // Make sure to use PascalCase for component names
 
 export default {
-  title: 'components/HomeRight', // PascalCase for storybook title
+  title: 'components/HomeRightbar', // PascalCase for storybook title
   component: HomeRightbar,
   tags: ['autodocs'],
   parameters: {
